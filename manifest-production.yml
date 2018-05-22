@@ -6,3 +6,5 @@ applications:
   #env:
     #WELCOME_MESSAGE: Hello from Cloud Foundry
   host: psarin-pal-tracker
+  services:
+  - tracker-database
