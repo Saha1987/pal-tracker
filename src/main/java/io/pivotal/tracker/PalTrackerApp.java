@@ -8,8 +8,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import javax.sql.DataSource;
 
 @SpringBootApplication
+@EnableSwagger2
 public class PalTrackerApp {
 
     public static void main(String[] arin) {
@@ -19,6 +23,11 @@ public class PalTrackerApp {
     @Bean
     TimeEntryRepository timeEntryRepository() {
         return new InMemoryTimeEntryRepository();
+    }
+
+    @Bean
+    TimeEntryRepository timeEntryRepository(DataSource dataSource) {
+        return new JdbcTimeEntryRepository(dataSource);
     }
 
     @Bean
