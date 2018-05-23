@@ -1,0 +1,22 @@
+aws-access-key-id: XXXXXXXXXXXXXXXX
+aws-secret-access-key: XXXXXXXXXXXXXXXXXXXXXXXX
+aws-bucket: aws-bucket
+cf-api-url: cf-api-url
+cf-username: email@domain.com
+cf-password: password
+cf-org: org-name
+mysql-ip: xx.x.x.xx
+review-database-name: database name
+review-database-username: db username
+review-database-password: password
+production-database-name: database name
+production-database-username: db username
+production-database-password: password
+github-repository: git@github.com:gitUserName/workspace-name.git
+github-private-key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIJKAIBAAKCAgEA0v1Hxb4V8jk2ixrBs622lzBjnBpMfti6iipBDoDxKI/C+JIp
+  LUG6KJsAN6S4Z2PD9n70Uvt27aU3/WFMhNcGecBHEF48Yq0/vAZ6Tz4McXB5H7v2
+  0CFHrr+ZKt1j0cN0sSSGlhbqTFdObkfPoTTpRNl+o7B+2B5GdktXQlVkyjKAVGR6
+  PEW9O7D4ypyRn6cvLNPpF5UbyYXUQzh4D1G6fdRUChfyaLmH3Wxy5xf5yhIfLNY0
+  -----END RSA PRIVATE KEY-----
