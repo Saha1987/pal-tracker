@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class TimeEntryHealthIndicator  implements HealthIndicator {
 
 
-    private static final int MIN_TIME_ENTRIES = 2;
+    private static final int MIN_TIME_ENTRIES = 5;
     private final TimeEntryRepository timeEntryRepo;
 
     public TimeEntryHealthIndicator(TimeEntryRepository timeEntryRepo) {
@@ -19,8 +19,8 @@ public class TimeEntryHealthIndicator  implements HealthIndicator {
     @Override
     public Health health() {
         Health.Builder builder = new Health.Builder();
-        builder.up();
-        if(timeEntryRepo.list().size()> MIN_TIME_ENTRIES) {
+        //builder.up();
+        if(timeEntryRepo.list().size() < MIN_TIME_ENTRIES) {
             builder.up();
         } else {
             builder.down();
